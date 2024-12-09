@@ -12,8 +12,8 @@
     $pallete: map.get($colors, $type);
     // Check if the level exists in the type
     @if map.has-key($pallete, $level) {
-      @warn 'Color found type #{$type} and level #{$level} ';
-      @return #{map.get($pallete, $level)}; // Return the color
+      //@warn 'Color found type #{$type} and level #{$level} ';
+      @return map.get($pallete, $level); // Return the color
     } @else {
       @warn 'Invalid color level #{$level}';
       @return null; // Return null if level is invalid
